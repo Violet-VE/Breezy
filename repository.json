@@ -1,0 +1,30 @@
+{
+    "name": "Breezy",
+    "summary": "正版图书阅读。使用方法：\n1. 登录书源对应的网站账号\n2. 选择图书并开启自动订阅\n3. 保持登录账号的余额充足",
+    "list": [
+      {
+        "name": "起点中文网",
+        "url": "https://m.qidian.com",
+        "category": 1,
+        "rank": 9,
+        "auth": true,
+        "version": 102
+      },
+      {
+        "name": "磨铁中文网",
+        "url": "http://m.motie.com",
+        "category": 1,
+        "rank": 12,
+        "auth": true,
+        "version": 100
+      },
+      {
+        "name": "纵横中文网",
+        "url": "http://www.zongheng.com",
+        "category": 1,
+        "rank": 9,
+        "auth": true,
+        "version": 102
+      }
+    ]
+  }

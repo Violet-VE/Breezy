@@ -1,0 +1,104 @@
+{
+  "name": "起点中文网",
+  "version": 102,
+  "category": 1,
+  "url": "https://m.qidian.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["$.bName", "h2.book-title"],
+    "author": ["$.bAuth", ".book-cell > .book-rand-a > a@js->${this}.match('作者：(.+)级别：')[1]"],
+    "cover": ["$.imgUrl@js->'https:'+${this}", "$.bid@js->'https://bookcover.yuewen.com/qdbimg/349573/' + ${this} + '/180'", "img.book-cover@attr->src"],
+    "summary": ["$.desc", "#bookSummary > content"],
+    "category": ["$.cat", ".book-cell > .book-meta:nth-child(1)@js->${this}.replace(/\\/.*/g, '')"],
+    "status": ["$.state", ".book-cell > .book-meta:nth-child(2)@js->${this}.replace(/.*\\|/g, '')"],
+    "update": ["$.lastUpdateTime", "#ariaMuLu@js->${this}.replace(/·.*/g, '')"],
+    "lastChapter": ["$.lastChapterName", "#ariaMuLu@js->${this}.replace(/.+连载至/g, '')"],
+    "link": ["$.bid@js->'https://m.qidian.com/book/' + ${this}"],
+    "catalog": ["#bookDetailWrapper@attr->data-book-id@js->'https://m.qidian.com/majax/book/category?bookId=' + ${this}"],
+    "custom": ["#bookDetailWrapper@attr->data-book-id"]
+  },
+  "catalog": {
+    "list": "$..vs[*]",
+    "orderBy": 0,
+    "booklet": {
+      "name": "$.vN",
+      "list": "$.cs[*]"
+    },
+    "chapter": {
+      "name": "$.cN",
+      "link": "$.id@js->'https://m.qidian.com/majax/chapter/getChapterInfo?bookId=' + ${custom[0]} + '&chapterId=' + ${this}"
+    }
+  },
+  "content": {
+    "text": "$..content"
+  },
+  "search": {
+    "link": "https://m.qidian.com/majax/search/list?kw=${key}",
+    "list": "$..records[*]"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "风云榜",
+        "link": "https://m.qidian.com/majax/rank/yuepiaolist?gender=male&catId=-1&pageNum="
+      },
+      {
+        "name": "畅销榜",
+        "link": "https://m.qidian.com/majax/rank/hotsaleslist?gender=male&catId=-1&pageNum="
+      },
+      {
+        "name": "粉丝榜",
+        "link": "https://m.qidian.com/majax/rank/newfanslist?gender=male&catId=-1&rankPeriod=3&pageNum="
+      },
+      {
+        "name": "推荐榜",
+        "link": "https://m.qidian.com/majax/rank/reclist?gender=male&catId=-1&rankPeriod=3&pageNum="
+      },
+      {
+        "name": "打赏榜",
+        "link": "https://m.qidian.com/majax/rank/rewardlist?gender=male&pageNum="
+      },
+      {
+        "name": "更新榜",
+        "link": "https://m.qidian.com/majax/rank/updatelist?gender=male&catId=-1&pageNum="
+      },
+      {
+        "name": "签约榜",
+        "link": "https://m.qidian.com/majax/rank/signlist?gender=male&catId=-1&pageNum="
+      },
+      {
+        "name": "新书榜",
+        "link": "https://m.qidian.com/majax/rank/newbooklist?gender=male&catId=-1&pageNum="
+      },
+      {
+        "name": "新人榜",
+        "link": "https://m.qidian.com/majax/rank/newauthorlist?gender=male&catId=-1&pageNum="
+      }
+    ],
+    "list": "$..records[*]",
+    "page": {
+      "index": 1,
+      "limit": 20,
+      "begin": "1",
+      "next": "${index}"
+    }
+  },
+  "auth": {
+    "login": "https://passport.yuewen.com/yuewen.html?areaid=1&appid=13&source=m",
+    "cookie": "qidian.com",
+    "params": "_csrfToken",
+    "verify": {
+      "link": "https://m.qidian.com/user",
+      "key": "#logout",
+      "value": "退出登录"
+    },
+    "vip": {
+      "key": "$..vipStatus",
+      "value": "1"
+    },
+    "buy": {
+      "key": "$..isBuy",
+      "value": "1"
+    }
+  }
+}

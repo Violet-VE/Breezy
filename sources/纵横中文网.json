@@ -1,0 +1,98 @@
+{
+  "name": "纵横中文网",
+  "version": 102,
+  "category": 1,
+  "url": "http://www.zongheng.com",
+  "charset": "utf-8",
+  "metadata": {
+    "name": ["h2 > a", ".rank_d_b_name",".book-name"],
+    "author": [".bookinfo > a:nth-child(1)", ".rank_d_b_cate > a:nth-child(1)", "div.au-name"],
+    "cover": ["img@attr->src", ".rank_d_book_img > a > img@attr->src", ".book-img > img@attr->src"],
+    "summary": ["p", ".rank_d_b_info", ".book-dec"],
+    "category": [".bookinfo > a:nth-child(3)", ".rank_d_b_cate > a:nth-child(2)", ".book-label > a:nth-child(2)"],
+    "status": [".book-label > a:nth-child(1)"],
+    "update": [".time@js->${this}.match('·(.+)·')[1].trim()"],
+    "lastChapter": [".book-new-chapter > .tit > a"],
+    "link": ["h2 > a@attr->href", ".rank_d_book_img > a@attr->href"],
+    "catalog": [".all-catalog@attr->href"]
+  },
+  "catalog": {
+    "list": ".volume-list > div",
+    "orderBy": 0,
+    "booklet": {
+      "name": ".volume@js->${this}.match('] (.+)共[0-9]+章')[1]",
+      "list": "li"
+    },
+    "chapter": {
+      "name": "a",
+      "link": "a@attr->href"
+    }
+  },
+  "content": {
+    "text": ".content > p"
+  },
+  "search": {
+    "link": "http://search.zongheng.com/s?keyword=${key}",
+    "list": ".search-result-list"
+  },
+  "rank": {
+    "link": [
+      {
+        "name": "月票榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=1&d=1&p="
+      },
+      {
+        "name": "畅销榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=3&d=1&p="
+      },
+      {
+        "name": "新书榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=4&d=1&p="
+      },
+      {
+        "name": "点击榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=5&d=1&p="
+      },
+      {
+        "name": "推荐榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=6&d=1&p="
+      },
+      {
+        "name": "捧场榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=7&d=1&p="
+      },
+      {
+        "name": "完结榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=8&d=1&p="
+      },
+      {
+        "name": "订阅榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=9&d=1&p="
+      },
+      {
+        "name": "更新榜",
+        "link": "http://www.zongheng.com/rank/details.html?rt=10&d=1&p="
+      }
+    ],
+    "list": ".rankpage_box > div.rank_d_list",
+    "page": {
+      "index": 1,
+      "limit": 20,
+      "begin": "1",
+      "next": "${index}"
+    }
+  },
+  "auth": {
+    "login": "https://passport.zongheng.com",
+    "cookie": "zongheng.com",
+    "verify": {
+      "link": "http://home.zongheng.com/account",
+      "key": "a.ud_logout",
+      "value": "退出"
+    },
+    "vip": {
+      "key": "#reader-order-box > h4@js->${this}.match('(.+~)')[1]",
+      "value": "抱歉哦，本章节为VIP章节，需要订阅才可以继续阅读哦~"
+    }
+  }
+}
