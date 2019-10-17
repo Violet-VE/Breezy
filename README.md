@@ -67,4 +67,4 @@
 
 其中list字段定位是根据搜索结果列表而来，源网站搜索结果如下图，可以看出每一个搜索结果（div）都带有相同的class（search-result-list），根据Jsoup语法.search-result-list即可选择全部带有search-result-list的div元素。
 
-![搜索结果][images/EX1.png]
+![搜索结果](images/EX1.png)
