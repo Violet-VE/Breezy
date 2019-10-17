@@ -65,7 +65,7 @@
  }
 ```
 
-其中list字段根据搜索结果列表得出，源网站搜索结果如下（删减无用元素），可以看出每一个搜索结果（div class="search-result-list clearfix"）都带有相同的class（search-result-list），根据Jsoup语法.search-result-list即可选择全部带有search-result-list的div元素。
+其中list字段根据搜索结果列表得出，源网站搜索结果如下（删减无用元素），可以看出每一个搜索结果（*div class="search-result-list clearfix"*）都带有相同的class（*search-result-list*），根据Jsoup语法.search-result-list即可选择全部带有**search-result-list**的div元素。
 
 ```html
 <!-- 搜索主内容 -->
