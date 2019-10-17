@@ -67,18 +67,20 @@
 
 其中list字段定位是根据搜索结果列表而来，源网站搜索结果如下（删减无用元素），可以看出每一个搜索结果（div）都带有相同的class（search-result-list），根据Jsoup语法.search-result-list即可选择全部带有search-result-list的div元素。
 
-> <!-- 搜索主内容 -->
-> <div class="search-html-box clearfix">
->     <div class="search-main fl">
->         <div class="search-tab">
->             <div class="search-result-list clearfix">...</div>
->             <div class="search-result-list clearfix">...</div>
->             <div class="search-result-list clearfix">...</div>
->             <div class="search-result-list clearfix">...</div>
->             <div class="search-result-list clearfix">...</div>
->         </div>
->     </div>
-> </div>
-> <!-- end 搜索主内容 -->
+```html
+<!-- 搜索主内容 -->
+<div class="search-html-box clearfix">
+ <div class="search-main fl">
+ <div class="search-tab">
+ <div class="search-result-list clearfix">...</div>
+ <div class="search-result-list clearfix">...</div>
+ <div class="search-result-list clearfix">...</div>
+ <div class="search-result-list clearfix">...</div>
+ <div class="search-result-list clearfix">...</div>
+ </div>
+ </div>
+</div>
+<!-- end 搜索主内容 -->
+```
 
 
