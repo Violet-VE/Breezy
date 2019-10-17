@@ -70,17 +70,15 @@
 ```html
 <!-- 搜索主内容 -->
 <div class="search-html-box clearfix">
- <div class="search-main fl">
- <div class="search-tab">
- <div class="search-result-list clearfix">...</div>
- <div class="search-result-list clearfix">...</div>
- <div class="search-result-list clearfix">...</div>
- <div class="search-result-list clearfix">...</div>
- <div class="search-result-list clearfix">...</div>
- </div>
- </div>
+    <div class="search-main fl">
+        <div class="search-tab">
+            <div class="search-result-list clearfix">...</div>
+            <div class="search-result-list clearfix">...</div>
+            <div class="search-result-list clearfix">...</div>
+            <div class="search-result-list clearfix">...</div>
+            <div class="search-result-list clearfix">...</div>
+        </div>
+</div>
 </div>
 <!-- end 搜索主内容 -->
 ```
-
-
