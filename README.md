@@ -1,4 +1,4 @@
-#### 书源教程
+### 书源教程
 
 原理是对在线阅读的小说网站进行转码阅读，所以需要了解HTML/CSS/JavaScript基础内容，以及Jsoup选择器的功能。
 
@@ -38,7 +38,7 @@
 
 ```json
 {
-    ...第2步基础信息
+    ...第2步：基础信息
     "search": {
         "link": "http://search.zongheng.com/s?keyword=${key}",
         "list": ".search-result-list"
@@ -57,7 +57,7 @@
 
 ```json
 {
-    ...第2步基础信息
+    ...第2步：基础信息
     "search": {
         "link": "http://search.zongheng.com/s@post->keyword=${key}",
         "list": ".search-result-list"
@@ -65,7 +65,7 @@
  }
 ```
 
-其中list字段定位是根据搜索结果列表而来，源网站搜索结果如下（删减无用元素），可以看出每一个搜索结果（div）都带有相同的class（search-result-list），根据Jsoup语法.search-result-list即可选择全部带有search-result-list的div元素。
+其中list字段根据搜索结果列表得出，源网站搜索结果如下（删减无用元素），可以看出每一个搜索结果（<div class="search-result-list clearfix">）都带有相同的class（search-result-list），根据Jsoup语法.search-result-list即可选择全部带有search-result-list的div元素。
 
 ```html
 <!-- 搜索主内容 -->
@@ -78,7 +78,9 @@
             <div class="search-result-list clearfix">...</div>
             <div class="search-result-list clearfix">...</div>
         </div>
-</div>
+    </div>
 </div>
 <!-- end 搜索主内容 -->
 ```
+
+
