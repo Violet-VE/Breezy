@@ -1,6 +1,6 @@
 {
   "name": "起点中文网",
-  "version": 102,
+  "version": 103,
   "category": 1,
   "url": "https://m.qidian.com",
   "charset": "utf-8",
@@ -35,53 +35,6 @@
   "search": {
     "link": "https://m.qidian.com/majax/search/list?kw=${key}",
     "list": "$..records[*]"
-  },
-  "rank": {
-    "link": [
-      {
-        "name": "风云榜",
-        "link": "https://m.qidian.com/majax/rank/yuepiaolist?gender=male&catId=-1&pageNum="
-      },
-      {
-        "name": "畅销榜",
-        "link": "https://m.qidian.com/majax/rank/hotsaleslist?gender=male&catId=-1&pageNum="
-      },
-      {
-        "name": "粉丝榜",
-        "link": "https://m.qidian.com/majax/rank/newfanslist?gender=male&catId=-1&rankPeriod=3&pageNum="
-      },
-      {
-        "name": "推荐榜",
-        "link": "https://m.qidian.com/majax/rank/reclist?gender=male&catId=-1&rankPeriod=3&pageNum="
-      },
-      {
-        "name": "打赏榜",
-        "link": "https://m.qidian.com/majax/rank/rewardlist?gender=male&pageNum="
-      },
-      {
-        "name": "更新榜",
-        "link": "https://m.qidian.com/majax/rank/updatelist?gender=male&catId=-1&pageNum="
-      },
-      {
-        "name": "签约榜",
-        "link": "https://m.qidian.com/majax/rank/signlist?gender=male&catId=-1&pageNum="
-      },
-      {
-        "name": "新书榜",
-        "link": "https://m.qidian.com/majax/rank/newbooklist?gender=male&catId=-1&pageNum="
-      },
-      {
-        "name": "新人榜",
-        "link": "https://m.qidian.com/majax/rank/newauthorlist?gender=male&catId=-1&pageNum="
-      }
-    ],
-    "list": "$..records[*]",
-    "page": {
-      "index": 1,
-      "limit": 20,
-      "begin": "1",
-      "next": "${index}"
-    }
   },
   "auth": {
     "login": "https://passport.yuewen.com/yuewen.html?areaid=1&appid=13&source=m",

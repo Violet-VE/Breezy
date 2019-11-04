@@ -1,14 +1,14 @@
 ### 书源教程
 
-原理是对在线阅读的小说网站进行转码阅读，所以需要了解HTML/CSS/JavaScript基础内容，以及Jsoup选择器的功能。
+原理是对在线阅读的小说网站进行转码阅读。需要了解HTML/CSS/JavaScript基础内容，以及Jsoup选择器的写法。
 
 参考内容：[Jsoup选择器文档](https://jsoup.org/apidocs/org/jsoup/select/Selector.html) 和 [Jsoup调试](https://try.jsoup.org)
 
-##### 1. 选择网站
+#### 1. 选择网站
 
 教程以 [纵横中文网](http://www.zongheng.com) 为例讲解。
 
-##### 2. 基础信息
+#### 2. 基础信息
 
 根据源网站信息创建书源文件：**纵横中文网.json**
 
@@ -32,7 +32,7 @@
 | url      | 网站  | 源网站链接                                     |
 | charset  | 字符  | utf-8 gbk gbk2312 影响search等请求时的编码，非源网站的编码 |
 
-##### 3. 搜索
+#### 3. 搜索
 
 在对应源网站中的搜索框进行搜索，并根据源码的内容，填充如下：
 
